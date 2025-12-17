@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - Fatin's Website</title>
+
+    <style>
+        /* ---------- BODY ---------- */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: #333;
+        }
+
+        /* ---------- BACKGROUND IMAGE ---------- */
+        .bg-img {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.6;
+        }
+
+        /* ---------- HEADER ---------- */
+        header {
+            background: linear-gradient(
+                to right,
+                rgba(183, 219, 243, 0.9),
+                rgba(143, 196, 232, 0.9)
+            );
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        /* ---------- NAV ---------- */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(111, 174, 217, 0.9);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            padding: 14px 18px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(79, 143, 184, 0.9);
+        }
+
+        /* ---------- MAIN CONTENT BOX ---------- */
+        main {
+            flex: 1;
+            max-width: 750px;
+            margin: 50px auto;
+            padding: 15px;
+            background: rgba(255,255,255,0.88);
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.45;
+        }
+
+        main h2 {
+            color: #6faed9;
+            margin-bottom: 10px;
+        }
+
+        main p {
+            margin: 0;
+        }
+
+        /* ---------- FLOATING EMOJIS ---------- */
+        .emoji {
+            position: fixed;
+            top: -50px;
+            font-size: 22px;
+            animation: fall linear forwards;
+            pointer-events: none;
+            z-index: 999;
+            opacity: 0.9;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* ---------- FOOTER ---------- */
+        footer {
+            background: rgba(111, 174, 217, 0.9);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Background image -->
+<img src="babyblueflower.jpg" alt="Background" class="bg-img">
+
+<header>
+    <h1>FATIN'S PERSONAL WEBSITE</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about me.html">About Me</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="family.html">Family</a></li>
+        <li><a href="friends.html">Friends</a></li>
+        <li><a href="favourites.html">Favourites</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h2>Hi! Welcome to my Personal Website 🌸</h2>
+    <p>
+        My name is <strong>Fatin Nur Aqilah Bt Mohd Fadzri Hisham</strong>.  
+        This website is created for IMD318 subject requirements.  
+        Explore my experience, education, family, friends, favourites, and gallery.  
+        I hope you enjoy visiting 💙
+    </p>
+</main>
+
+<footer>
+    <p>© 2025 This Website is for educational purposes only | Fatin Nur Aqilah</p>
+</footer>
+
+<!-- ---------- JAVASCRIPT FLOATING EMOJIS ---------- -->
+<script>
+    const emojis = ["🌸", "💙", "✨", "🌼", "☁️"];
+
+    function createEmoji() {
+        const emoji = document.createElement("div");
+        emoji.classList.add("emoji");
+        emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+
+        emoji.style.left = Math.random() * 100 + "vw";
+        emoji.style.animationDuration = Math.random() * 3 + 4 + "s";
+
+        document.body.appendChild(emoji);
+
+        setTimeout(() => {
+            emoji.remove();
+        }, 7000);
+    }
+
+    setInterval(createEmoji, 600);
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+

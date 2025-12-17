@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Favourites - Fatin's Website</title>
+    <style>
+        /* ---------- BODY ---------- */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: #333;
+            overflow-x: hidden; /* prevent horizontal scroll from emojis */
+        }
+
+        /* ---------- BACKGROUND IMAGE ---------- */
+        .bg-img {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.6; /* soft pastel look */
+        }
+
+        /* ---------- HEADER ---------- */
+        header {
+            background: linear-gradient(to right, rgba(183, 219, 243, 0.8), rgba(143, 196, 232, 0.8));
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        /* ---------- NAV ---------- */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(111, 174, 217, 0.9);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            padding: 14px 18px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(79, 143, 184, 0.9);
+        }
+
+        /* ---------- MAIN CONTENT ---------- */
+        main {
+            flex: 1;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(255,255,255,0.85); /* semi-transparent */
+            border-radius: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        main h2 {
+            color: #6faed9;
+            margin-bottom: 20px;
+        }
+
+        main p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* ---------- FAVOURITES CARDS ---------- */
+        .favourites-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .favourite-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            width: 200px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .favourite-card:hover {
+            transform: scale(1.05);
+        }
+
+        .favourite-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 10px;
+        }
+
+        .favourite-card h4 {
+            color: #6faed9;
+            margin: 10px 0 5px;
+        }
+
+        .favourite-card p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* ---------- FOOTER ---------- */
+        footer {
+            background: rgba(111, 174, 217, 0.9);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* ---------- EMOJIS ---------- */
+        .emoji {
+            position: fixed;
+            top: -50px;
+            font-size: 24px;
+            z-index: 9999;
+            pointer-events: none;
+            user-select: none;
+            animation-name: fall;
+            animation-timing-function: linear;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-50px); }
+            100% { transform: translateY(110vh); }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Background image -->
+<img src="babyblueflower.jpg" alt="Background" class="bg-img">
+
+<header>
+    <h1>FATIN'S PERSONAL WEBSITE</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about me.html">About Me</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="family.html">Family</a></li>
+        <li><a href="friends.html">Friends</a></li>
+        <li><a href="favourites.html">Favourites</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h2>My Favourites 🌸</h2>
+    <p>
+        Here are some of my favourite things, places, and memories that make life special and meaningful to me. 
+        From colours to hobbies and little joys, these are the things I love most!
+    </p>
+
+    <!-- FAVOURITES CARDS -->
+    <div class="favourites-container">
+        <div class="favourite-card">
+            <img src="music.jpg" alt="Favourite 1">
+            <h4>Pastel Blue</h4>
+            <p>My go to playlist whenever i feel like hearing music.</p>
+        </div>
+        <div class="favourite-card">
+            <img src="matcha.jpg" alt="Favourite 2">
+            <h4>Flowers</h4>
+            <p>I love drinking matcha, especially strawberry matcha.</p>
+        </div>
+        <div class="favourite-card">
+            <img src="manga.jpg" alt="Favourite 3">
+            <h4>Cafés</h4>
+            <p>Reading manga ggives me comfort everytime.</p>
+        </div>
+        <div class="favourite-card">
+            <img src="kdrama.jpg" alt="Favourite 4">
+            <h4>K-Dramas</h4>
+            <p>I love relaxing with my favourite k-drama shows.</p>
+        </div>
+        <div class="favourite-card">
+            <img src="cakes.jpg" alt="Favourite 5">
+            <h4>Pastries</h4>
+            <p>Sweet treats are the best companions for tea time.</p>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 This Website is for educational purposes only | Fatin Nur Aqilah Bt Mohd Fadzri Hisham 🌸</p>
+</footer>
+
+<!-- ---------- DRIFTING EMOJIS SCRIPT ---------- -->
+<script>
+    const emojis = ['🌸','✨','💖','🌟','🎀','🍀'];
+    
+    function createEmoji() {
+        const emoji = document.createElement('div');
+        emoji.classList.add('emoji');
+        emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+        emoji.style.left = Math.random() * window.innerWidth + 'px';
+        emoji.style.animationDuration = (5 + Math.random() * 5) + 's'; // 5-10s fall
+        document.body.appendChild(emoji);
+        setTimeout(() => {
+            emoji.remove();
+        }, 10000); // remove after 10s
+    }
+
+    setInterval(createEmoji, 500); // create emoji every 0.5s
+</script>
+
+</body>
+</html>
+
+
+<footer>
+    <p>&copy; 2025 This Website is for educational purposes only | Fatin Nur Aqilah Bt Mohd Fadzri Hisham</p>
+</footer>
+
+</body>
+</html>

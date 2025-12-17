@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About Me</title>
+
+<style>
+/* ---------- BODY ---------- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------- BACKGROUND ---------- */
+.bg-img {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+/* ---------- HEADER ---------- */
+header {
+    background: linear-gradient(to right, rgba(183,219,243,.85), rgba(143,196,232,.85));
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+/* ---------- NAV ---------- */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: rgba(111,174,217,.9);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: white;
+    padding: 14px 18px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background: rgba(79,143,184,.9);
+}
+
+/* ---------- ABOUT SECTION ---------- */
+.about-section {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: rgba(255,255,255,.85);
+    padding: 30px;
+    border-radius: 25px;
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+.about-img img {
+    width: 240px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.about-text h3 {
+    color: #6faed9;
+}
+
+/* ---------- BIODATA TABLE ---------- */
+.biodata-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: rgba(255,255,255,.85);
+    padding: 30px;
+    border-radius: 25px;
+}
+
+.biodata-title {
+    text-align: center;
+    font-size: 26px;
+    color: #6faed9;
+    margin-bottom: 20px;
+}
+
+.biodata-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.biodata-table td {
+    padding: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+.biodata-table td:first-child {
+    font-weight: bold;
+    color: #6faed9;
+    width: 200px;
+}
+
+/* ---------- MOVING GALLERY ---------- */
+.gallery-wrapper {
+    max-width: 1200px;
+    margin: 60px auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.gallery-title {
+    font-size: 28px;
+    color: #6faed9;
+    margin-bottom: 30px;
+}
+
+.gallery-track {
+    display: flex;
+    gap: 25px;
+    width: max-content;
+    margin: 0 auto 35px auto;
+}
+
+.card {
+    background: white;
+    border-radius: 18px;
+    width: 220px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.15);
+}
+
+.card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 18px 18px 0 0;
+}
+
+.card p {
+    padding: 10px;
+    font-size: 14px;
+}
+
+.layer1 { animation: moveLeft 60s linear infinite; }
+.layer2 { animation: moveRight 60s linear infinite; }
+
+@keyframes moveLeft {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
+@keyframes moveRight {
+    from { transform: translateX(-95%); }
+    to { transform: translateX(0); }
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    background: rgba(111,174,217,.9);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ---------- BLURRY DRIFTING BUBBLES ---------- */
+.bubble {
+    position: fixed;
+    top: -50px;
+    pointer-events: none;
+    user-select: none;
+    z-index: 9999;
+    opacity: 0.6;
+    filter: blur(2px);
+    animation-name: driftDown;
+    animation-timing-function: linear;
+}
+
+@keyframes driftDown {
+    0% { transform: translateY(-50px) translateX(0); opacity: 0.6; }
+    50% { transform: translateY(50vh) translateX(20px); opacity: 0.8; }
+    100% { transform: translateY(110vh) translateX(-20px); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<img src="babyblueflower.jpg" class="bg-img">
+
+<header>
+<h1>FATIN'S PERSONAL WEBSITE</h1>
+</header>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about me.html">About Me</a></li>
+<li><a href="experience.html">Experience</a></li>
+<li><a href="education.html">Education</a></li>
+<li><a href="family.html">Family</a></li>
+<li><a href="friends.html">Friends</a></li>
+<li><a href="favourites.html">Favourites</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+</ul>
+</nav>
+
+<!-- ABOUT -->
+<div class="about-section">
+    <div class="about-img">
+        <img src="myphoto2.jpg">
+    </div>
+    <div class="about-text">
+        <h3>Hello, I'm Fatin 🌸</h3>
+        <p>I love pastel blue, cozy cafés, calm vibes and aesthetic memories.</p>
+        <p>Photography, K-dramas & spending time with loved ones ✨</p>
+    </div>
+</div>
+
+<!-- BIODATA TABLE -->
+<div class="biodata-container">
+<h2 class="biodata-title">My Biodata</h2>
+<table class="biodata-table">
+<tr><td>Full Name</td><td>Fatin Nur Aqilah Bt Mohd Fadzri Hisham</td></tr>
+<tr><td>Date of Birth</td><td>5 June 2005</td></tr>
+<tr><td>Hobbies</td><td>Café hopping, photography, music</td></tr>
+<tr><td>Interests</td><td>K-dramas, aesthetic photography</td></tr>
+<tr><td>Personality</td><td>Soft-hearted, calm, caring</td></tr>
+<tr><td>Favourite Things</td><td>Baby blue, flowers, cats, sunsets</td></tr>
+</table>
+</div>
+
+<!-- MOVING GALLERY -->
+<div class="gallery-wrapper">
+<h2 class="gallery-title">Things I Love 💙</h2>
+
+<div class="gallery-track layer1">
+    <div class="card"><img src="cafehooping.jpg"><p>Café hopping ☕</p></div>
+    <div class="card"><img src="driving.jpg"><p>Driving 🌸</p></div>
+    <div class="card"><img src="chagee.jpg"><p> Drinking Chagee</p></div>
+    <div class="card"><img src="koreanfood.jpg"><p> Korean Food</p></div>
+    <div class="card"><img src="night walk.jpg"><p> Night Walk in City</p></div>
+</div>
+
+<div class="gallery-track layer2">
+    <div class="card"><img src="buffet.jpg"><p>Shabuyaki</p></div>
+    <div class="card"><img src="boy.jpg"><p> My cat, Boy 🤍</p></div>
+    <div class="card"><img src="pastries.jpg"><p> Pastries</p></div>
+    <div class="card"><img src="sunset.jpg"><p>Sunsets 🌅</p></div>
+    <div class="card"><img src="flower.jpg"><p>Flowers</p></div>
+</div>
+</div>
+
+<footer>
+<p>© 2025 This Website is for educational purposes only | Fatin Nur Aqilah</p>
+</footer>
+
+<!-- ---------- BLURRY DRIFTING BUBBLES SCRIPT ---------- -->
+<script>
+const bubbleEmojis = ['🌸','✨','💖','🌟','🎀','🍀'];
+
+function createBubble() {
+    const bubble = document.createElement('div');
+    bubble.classList.add('bubble');
+    bubble.textContent = bubbleEmojis[Math.floor(Math.random() * bubbleEmojis.length)];
+    bubble.style.left = Math.random() * window.innerWidth + 'px';
+    bubble.style.fontSize = (20 + Math.random() * 30) + 'px';
+    bubble.style.animationDuration = (6 + Math.random() * 6) + 's';
+    document.body.appendChild(bubble);
+
+    setTimeout(() => {
+        bubble.remove();
+    }, 12000);
+}
+
+setInterval(createBubble, 400);
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+

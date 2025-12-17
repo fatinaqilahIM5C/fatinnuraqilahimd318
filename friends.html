@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Friends - Fatin's Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: #333;
+            background: linear-gradient(to bottom right, #e0f7ff, #f0f8ff);
+        }
+
+        .bg-img {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.25;
+        }
+
+        header {
+            background: rgba(183, 219, 243, 0.9);
+            color: white;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(111, 174, 217, 0.95);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            padding: 14px 18px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(79, 143, 184, 0.95);
+        }
+
+        main {
+            flex: 1;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 30px;
+            text-align: center;
+            background: rgba(255,255,255,0.9);
+            border-radius: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        main h2 {
+            color: #6faed9;
+            margin-bottom: 20px;
+            font-size: 32px;
+            display: inline-block;
+            animation: floatText 5s ease-in-out infinite;
+        }
+
+        @keyframes floatText {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        main p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .friends-gallery-container {
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .friends-gallery-track {
+            display: flex;
+            gap: 25px;
+            width: max-content;
+            animation: scroll 40s linear infinite;
+        }
+
+        .friends-gallery-track:hover {
+            animation-play-state: paused;
+        }
+
+        .friend-card {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            overflow: hidden;
+            text-align: center;
+            min-width: 220px;
+            padding: 10px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+        }
+
+        .friend-card:hover {
+            transform: translateY(-10px) rotate(-2deg);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .friend-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+
+        .friend-card img:hover {
+            transform: scale(1.05);
+        }
+
+        .friend-card h4 {
+            margin: 10px 0 0;
+            font-size: 15px;
+            color: #555;
+            font-weight: bold;
+            background: rgba(255,255,255,0.85);
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        footer {
+            background: rgba(111, 174, 217, 0.95);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .friends-gallery-track {
+                gap: 15px;
+            }
+            .friend-card {
+                min-width: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<img src="babyblueflower.jpg" alt="Background" class="bg-img">
+
+<header>
+    <h1>FATIN'S PERSONAL WEBSITE </h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html"> Home</a></li>
+        <li><a href="about me.html"> About Me</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="family.html">Family</a></li>
+        <li><a href="friends.html"> Friends</a></li>
+        <li><a href="favourites.html"> Favourites</a></li>
+        <li><a href="gallery.html"> Gallery</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h2>🫂 My Friends & Me 🫂</h2>
+    <p>
+        My friends have always been one of the biggest highlights of my life. 💖<br>
+        From high school memories 🎒 to spontaneous café-hopping ☕ and late-night drives 🚗💨,<br>
+        they are the people who bring joy, laughter 😄, and comfort into my everyday moments.<br>
+        I cherish every hangout, every inside joke 🤫, and every quiet moment we spend together ✨.
+    </p>
+
+    <div class="friends-gallery-container">
+        <div class="friends-gallery-track">
+            <div class="friend-card"><img src="myfriends.jpg"><h4>👧 This is Nurrin</h4></div>
+            <div class="friend-card"><img src="myfriends2.jpg"><h4>👩 This is Anis</h4></div>
+            <div class="friend-card"><img src="myfriends3.jpg"><h4>🎓 My Diploma Friends</h4></div>
+            <div class="friend-card"><img src="myfriends4.jpg"><h4>🤳 Selfie with Dibo & Aymi</h4></div>
+            <div class="friend-card"><img src="myfriends5.jpg"><h4>🍴 With Nanad & Aymi</h4></div>
+            <div class="friend-card"><img src="anis.jpg"><h4>💖 My Bestfriend, Anis</h4></div>
+            <div class="friend-card"><img src="trio.jpg"><h4>👭 My Trio</h4></div>
+            <div class="friend-card"><img src="wdibo.jpg"><h4>😆 Being Goofy</h4></div>
+            <div class="friend-card"><img src="trio2.jpg"><h4>📚 Trio in Form 3</h4></div>
+            <div class="friend-card"><img src="empat.jpg"><h4>🍔 My Food Hunting Gang</h4></div>
+            <div class="friend-card"><img src="misya.jpg"><h4>📝 My Diploma Partner From Day 1</h4></div>
+            <div class="friend-card"><img src="trio4.jpg"><h4>🏫 Trio During SPM Season</h4></div>
+            <div class="friend-card"><img src="trio3.jpg"><h4>🎤 Karaoke Together</h4></div>
+
+            <!-- duplicate for smooth infinite scroll -->
+            <div class="friend-card"><img src="myfriends.jpg"><h4>👧 This is Nurrin</h4></div>
+            <div class="friend-card"><img src="myfriends2.jpg"><h4>👩 This is Anis</h4></div>
+            <div class="friend-card"><img src="myfriends3.jpg"><h4>🎓 My Diploma Friends</h4></div>
+            <div class="friend-card"><img src="myfriends4.jpg"><h4>🤳 Selfie with Dibo & Aymi</h4></div>
+            <div class="friend-card"><img src="myfriends5.jpg"><h4>🍴 With Nanad & Aymi</h4></div>
+            <div class="friend-card"><img src="anis.jpg"><h4>💖 My Bestfriend, Anis</h4></div>
+            <div class="friend-card"><img src="trio.jpg"><h4>👭 My Trio</h4></div>
+            <div class="friend-card"><img src="wdibo.jpg"><h4>😆 Being Goofy</h4></div>
+            <div class="friend-card"><img src="trio2.jpg"><h4>📚 Trio in Form 3</h4></div>
+            <div class="friend-card"><img src="empat.jpg"><h4>🍔 My Food Hunting Gang</h4></div>
+            <div class="friend-card"><img src="misya.jpg"><h4>📝 My Diploma Partner From Day 1</h4></div>
+            <div class="friend-card"><img src="trio4.jpg"><h4>🏫 Trio During SPM Season</h4></div>
+            <div class="friend-card"><img src="trio3.jpg"><h4>🎤 Karaoke Together</h4></div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 This Website is for educational purposes only | Fatin Nur Aqilah Bt Mohd Fadzri Hisham 🌸</p>
+</footer>
+
+</body>
+</html>
+
+

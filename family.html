@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Family - Fatin's Website</title>
+    <style>
+        /* ---------- BODY ---------- */
+        body {
+            font-family: 'Arial', serif;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: #333;
+        }
+
+        /* ---------- BACKGROUND IMAGE ---------- */
+        .bg-img {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.6;
+        }
+
+        /* ---------- HEADER ---------- */
+        header {
+            background: linear-gradient(to right, rgba(183, 219, 243, 0.8), rgba(143, 196, 232, 0.8));
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        /* ---------- NAV ---------- */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(111, 174, 217, 0.9);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            padding: 14px 18px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(79, 143, 184, 0.9);
+        }
+
+        /* ---------- MAIN CONTENT ---------- */
+        main {
+            flex: 1;
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(255,255,255,0.85);
+            border-radius: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        main h2 {
+            color: #6faed9;
+            margin-bottom: 20px;
+        }
+
+        main p {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        /* ---------- FAMILY POLAROID CARDS ---------- */
+        .polaroid-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* center all cards */
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .polaroid-card {
+            background: #fff;
+            padding: 10px 10px 25px;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            width: 220px;
+            flex: 1 1 220px; /* allow card to shrink/grow */
+            max-width: 220px; /* prevent stretching */
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .polaroid-card img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .polaroid-card:hover {
+            transform: translateY(-8px) rotate(-1deg);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+        }
+
+        .polaroid-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .polaroid-caption {
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* ---------- FOOTER ---------- */
+        footer {
+            background: rgba(111, 174, 217, 0.9);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Background image -->
+<img src="babyblueflower.jpg" alt="Background" class="bg-img">
+
+<header>
+    <h1>FATIN'S PERSONAL WEBSITE</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about me.html">About Me</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="family.html">Family</a></li>
+        <li><a href="friends.html">Friends</a></li>
+        <li><a href="favourites.html">Favourites</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h2>THIS PAGE IS ALL ABOUT MY FAMILY!</h2>
+    <p>
+        I have three siblings; I'm the eldest and we’re all girls. My dad works at BASF Petronas while my mom works at SJKC Kong Min as a Pembantu Pengurusan Murid. We love spending weekends together, enjoying home-cooked meals, or going for short trips around Kuantan.
+    </p>
+
+    <div class="polaroid-container">
+        <div class="polaroid-card">
+            <img src="myfamily.jpg" alt="Family Photo 1">
+            <div class="polaroid-caption">Our happy family together 💕</div>
+        </div>
+
+        <div class="polaroid-card">
+            <img src="mamapapa.jpg" alt="Mama&Papa">
+            <div class="polaroid-caption">My Mom and Dad 💕</div>
+        </div>
+
+        <div class="polaroid-card">
+            <img src="aliesya.jpg" alt="Me and sister">
+            <div class="polaroid-caption">Me and my second sister 🌸</div>
+        </div>
+
+        <div class="polaroid-card">
+            <img src="pia2.jpg" alt="Youngest Sibling">
+            <div class="polaroid-caption">My younger sister 🌸</div>
+        </div>
+
+        <div class="polaroid-card">
+            <img src="denganpapa.jpg" alt="My siblings and Dad">
+            <div class="polaroid-caption">My siblings with Papa ✨</div>
+        </div>
+
+        <!-- Added another layer -->
+        <div class="polaroid-card">
+            <img src="denganmama.jpg" alt="Me and mom">
+            <div class="polaroid-caption"> Me and Mama 🌸</div>
+        </div>
+
+        <div class="polaroid-card">
+            <img src="wmamapapa2.jpg" alt="Baby me and parents">
+            <div class="polaroid-caption">Baby me and my parents 💕 </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 This Website is for educational purposes only | Fatin Nur Aqilah Bt Mohd Fadzri Hisham</p>
+</footer>
+
+</body>
+</html>
+
+
+
+
+

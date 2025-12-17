@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Education - Fatin's Website</title>
+<style>
+    /* ---------- BODY ---------- */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        color: #333;
+        background-color: #f0f8ff;
+    }
+
+    /* ---------- BACKGROUND IMAGE ---------- */
+    .bg-img {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        opacity: 0.2;
+    }
+
+    /* ---------- HEADER ---------- */
+    header {
+        background: linear-gradient(to right, rgba(183,219,243,.85), rgba(143,196,232,.85));
+        color: white;
+        padding: 25px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* ---------- NAV ---------- */
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background: rgba(111,174,217,.9);
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav ul li a {
+        color: white;
+        padding: 14px 18px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+        background: rgba(79,143,184,.9);
+    }
+
+    /* ---------- MAIN ---------- */
+    main {
+        flex: 1;
+        max-width: 1100px;
+        margin: 40px auto;
+        padding: 30px;
+        background: rgba(255,255,255,.95);
+        border-radius: 25px;
+        box-shadow: 0 8px 25px rgba(0,0,0,.1);
+    }
+
+    main h2 {
+        color: #6faed9;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    /* ---------- FLOATING TEXT ---------- */
+    .floating-text {
+    display: inline-block;
+    position: relative; /* make it movable */
+    left: 50%;          /* start from center */
+    transform: translateX(-50%); /* center horizontally */
+    animation: floatText 5s ease-in-out infinite;
+}
+
+@keyframes floatText {
+    0%   { transform: translateX(-50%) translateY(0); }
+    25%  { transform: translateX(-50%) translateY(-5px); }
+    50%  { transform: translateX(-50%) translateY(-10px); }
+    75%  { transform: translateX(-50%) translateY(-5px); }
+    100% { transform: translateX(-50%) translateY(0); }
+}
+
+
+    /* ---------- EDUCATION CARDS ---------- */
+    .education-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        justify-content: center;
+    }
+
+    .edu-card {
+        background: #e6f3fb;
+        border-radius: 20px;
+        box-shadow: 0 6px 20px rgba(0,0,0,.1);
+        flex: 1 1 300px;
+        max-width: 400px;
+        padding: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .edu-card:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 12px 25px rgba(0,0,0,.2);
+    }
+
+    .edu-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 15px;
+        margin-bottom: 15px;
+        transition: transform 0.3s ease;
+    }
+
+    .edu-card:hover img {
+        transform: scale(1.05);
+    }
+
+    .edu-card h3 {
+        color: #6faed9;
+        margin: 10px 0;
+    }
+
+    .edu-card p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+        background: rgba(111,174,217,.9);
+        color: white;
+        padding: 20px;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 768px) {
+        .education-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+</style>
+</head>
+<body>
+
+<!-- Background image -->
+<img src="babyblueflower.jpg" alt="Background" class="bg-img">
+
+<header>
+    <h1>FATIN'S PERSONAL WEBSITE</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about me.html">About Me</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="family.html">Family</a></li>
+        <li><a href="friends.html">Friends</a></li>
+        <li><a href="favourites.html">Favourites</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h2 class="floating-text"> Welcome to My Educational Background 🎓</h2>
+
+    <div class="education-container">
+        <!-- Middle School -->
+        <div class="edu-card">
+            <img src="sksk.jpg" alt="SK Sungai Karang">
+            <h3>SK Sungai Karang 🏫</h3>
+            <p>I attended middle school at SK Sungai Karang from ages 7 to 12, where I gained valuable early education experiences. During my time there, I also prepared for and sat for the UPSR examination. This period helped lay the foundation for my academic growth and personal development.</p>
+        </div>
+
+        <!-- High School -->
+        <div class="edu-card">
+            <img src="shaks.jpg" alt="SMK Sultanah Hajjah Kalsom">
+            <h3>SMK Sultanah Hajjah Kalsom 🏫</h3>
+            <p>I completed my high school education at SMK Sultanah Hajjah Kalsom in Kuantan, from Form 1 to Form 5. During this time, I made a lot of friends and built meaningful relationships. The experience helped me develop social skills and created lasting memories.</p>
+        </div>
+
+        <!-- University -->
+        <div class="edu-card">
+            <img src="uitmck.jpg" alt="UiTM Campus">
+            <h3>Universiti Teknologi MARA (UiTM) Cawangan Kelantan Kampus Machang 🎓</h3>
+            <p> I am currently pursuing my studies at UiTM Machang, Kelantan, focusing on a Diploma in Information Management to enhance my knowledge and prepare for a professional career. This program allows me to develop essential skills and gain practical insights relevant to the information management field. Through my studies, I am building a strong foundation for future career opportunities.
+            </p>
+        </div>
+    </div>
+</main>     
+<footer>
+    <p>&copy; 2025 This Website is for educational purposes only | Fatin Nur Aqilah Bt Mohd Fadzri Hisham</p>
+</footer>
+
+</body>
+</html>
+
+
+
